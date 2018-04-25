@@ -5,13 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.github.boyeborg</groupId>
-	<artifactId>work-in-progress</artifactId>
+	<artifactId>tdt4100-exercise-feature-extraction</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>work-in-progress</name>
+	<name>TDT4100 exercise feature extraction</name>
 	<description>Feature extraction from exercises in TDT4100</description>
-	<url>https://github.com/boyeborg/work-in-progress</url>
+	<url>https://github.com/boyeborg/tdt4100-exercise-feature-extraction</url>
 
 	<licenses>
 		<license>
@@ -22,11 +22,11 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/boyeborg/work-in-progress/issues</url>
+		<url>https://github.com/boyeborg/tdt4100-exercise-feature-extraction/issues</url>
 	</issueManagement>
 
 	<scm>
-		<url>https://github.com/boyeborg/work-in-progress</url>
+		<url>https://github.com/boyeborg/tdt4100-exercise-feature-extraction</url>
 	</scm>
 
 	<developers>
@@ -116,7 +116,7 @@
 		<dependency>
 	    <groupId>com.github.openwhale</groupId>
 	    <artifactId>spritz</artifactId>
-	    <version>master-SNAPSHOT</version>
+	    <version>v0.2.1</version>
 		</dependency>
 	</dependencies>
 
