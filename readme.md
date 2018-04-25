@@ -17,7 +17,9 @@ java -jar tdt4100-exercise-feature-extraction-{version}-STANDALONE.jar path/to/e
 If you want, you can create an alias for it:
 
 ```
-alias tefe="java -jar tdt4100-exercise-feature-extraction-{version}-STANDALONE.jar"
+sudo cp tdt4100-exercise-feature-extraction-{version}-STANDALONE.jar /opt/tefe.jar
+sudo chmod +x /opt/tefe.jar
+alias tefe="java -jar /opt/tefe.jar"
 ```
 
 The `path/to/exercises` should be the path the a directory containing one folder for each student.
@@ -40,7 +42,8 @@ exercises/
 ...
 ```
 
-The program will write the results to the terminal (stdout). If you want to write the results to the results to a file: `tefe path/to/exercises > results.csv`
+The program will write the results to the terminal (stdout). If you want to write the results to the
+results to a file: `tefe path/to/exercises > results.csv`
 
 You can also copy the results direcly to your clipboard.
 
