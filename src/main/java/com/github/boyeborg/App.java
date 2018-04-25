@@ -43,6 +43,7 @@ public class App {
 		// Add collectors
 		factory.add(() -> new StudentIdCollector(), "studentId");
 		factory.add(() -> new DebuggerUsedCollector(), "debuggerUsed");
+		factory.add(() -> new WorkAfterCompletionCollector(), "workAfterCompletion");
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
@@ -105,7 +106,7 @@ public class App {
 
 		// Process all events
 		eventConsumer.process();
-
+		
 		// Print out the results
 		System.out.println(eventConsumer);
 	}
