@@ -15,7 +15,7 @@ public class WorkAfterCompletionCollector implements ICollector<EObject> {
 	private TreeMap<Long, Integer> edits = new TreeMap<>();
 	private int result;
 
-	static double L2norm = 0;
+	private static double L2norm = 0;
 
 	@Override
 	public void process() {

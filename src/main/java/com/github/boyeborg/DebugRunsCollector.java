@@ -8,7 +8,7 @@ public class DebugRunsCollector implements ICollector<EObject> {
 
 	private int numDebugRuns = 0;
 
-	static double L2norm = 0;
+	private static double L2norm = 0;
 
 	@Override
 	public void process() {

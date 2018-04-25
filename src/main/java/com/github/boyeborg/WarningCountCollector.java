@@ -9,7 +9,7 @@ public class WarningCountCollector implements ICollector<EObject> {
 	private long latestEditTimestamp = 0;
 	private int warningCount = 0;
 
-	public static double L2norm = 0;
+	private static double L2norm = 0;
 
 	@Override
 	public void process() {

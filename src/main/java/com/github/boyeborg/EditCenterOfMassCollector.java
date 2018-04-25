@@ -13,9 +13,9 @@ public class EditCenterOfMassCollector implements ICollector<EObject> {
 	private Map<Long, Integer> edits = new TreeMap<>();
 	private double result;
 
-	public static long firstEdit = Long.MAX_VALUE;
-	public static long lastEdit = Long.MIN_VALUE;
-	public static Map<Long, Integer> globalEdits = new TreeMap<>();
+	private static long firstEdit = Long.MAX_VALUE;
+	private static long lastEdit = Long.MIN_VALUE;
+	private static Map<Long, Integer> globalEdits = new TreeMap<>();
 
 	@Override
 	public void process() {
