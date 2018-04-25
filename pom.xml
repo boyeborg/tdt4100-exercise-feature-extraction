@@ -6,7 +6,7 @@
 	
 	<groupId>com.github.boyeborg</groupId>
 	<artifactId>tdt4100-exercise-feature-extraction</artifactId>
-	<version>0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>TDT4100 exercise feature extraction</name>
