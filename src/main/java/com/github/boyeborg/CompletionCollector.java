@@ -1,7 +1,9 @@
 package com.github.boyeborg;
 
 import com.github.openwhale.spritz.ICollector;
+
 import no.hal.learning.exercise.junit.impl.JunitTestProposalImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 public class CompletionCollector implements ICollector<EObject> {

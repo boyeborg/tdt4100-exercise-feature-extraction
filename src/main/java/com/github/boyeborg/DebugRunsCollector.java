@@ -1,7 +1,9 @@
 package com.github.boyeborg;
 
 import com.github.openwhale.spritz.ICollector;
+
 import no.hal.learning.exercise.jdt.impl.JdtLaunchEventImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 public class DebugRunsCollector implements ICollector<EObject> {

@@ -1,11 +1,14 @@
 package com.github.boyeborg;
 
 import com.github.openwhale.spritz.ICollector;
+
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
+
 import no.hal.learning.exercise.jdt.impl.JdtSourceEditEventImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 public class EditCenterOfMassCollector implements ICollector<EObject> {

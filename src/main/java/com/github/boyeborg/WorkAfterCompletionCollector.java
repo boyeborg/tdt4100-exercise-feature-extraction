@@ -4,8 +4,10 @@ import com.github.openwhale.spritz.ICollector;
 
 import java.util.NoSuchElementException;
 import java.util.TreeMap;
+
 import no.hal.learning.exercise.jdt.impl.JdtSourceEditEventImpl;
 import no.hal.learning.exercise.junit.impl.JunitTestEventImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 public class WorkAfterCompletionCollector implements ICollector<EObject> {

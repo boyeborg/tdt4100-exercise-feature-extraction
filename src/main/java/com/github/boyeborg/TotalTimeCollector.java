@@ -1,10 +1,13 @@
 package com.github.boyeborg;
 
 import com.github.openwhale.spritz.ICollector;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import no.hal.learning.exercise.jdt.impl.JdtSourceEditEventImpl;
+
 import org.eclipse.emf.ecore.EObject;
 
 public class TotalTimeCollector implements ICollector<EObject> {
