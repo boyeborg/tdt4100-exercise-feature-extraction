@@ -48,6 +48,7 @@ public class App {
 		factory.add(() -> new DebugRunsCollector(), "numDebugRuns");
 		factory.add(() -> new EditCenterOfMassCollector(), "editCenterOfMass");
 		factory.add(() -> new WarningCountCollector(), "numWarnings");
+		factory.add(() -> new TotalTimeCollector(10 * 60 * 1000), "totalTime"); // 10 minutes
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
