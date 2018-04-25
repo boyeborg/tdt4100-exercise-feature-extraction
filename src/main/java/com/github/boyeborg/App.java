@@ -47,6 +47,7 @@ public class App {
 		factory.add(() -> new CompletionCollector(), "completion");
 		factory.add(() -> new DebugRunsCollector(), "numDebugRuns");
 		factory.add(() -> new EditCenterOfMassCollector(), "editCenterOfMass");
+		factory.add(() -> new WarningCountCollector(), "numWarnings");
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
