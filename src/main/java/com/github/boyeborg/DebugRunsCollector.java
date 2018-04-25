@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 
 public class DebugRunsCollector implements ICollector<EObject> {
 
-	int numDebugRuns = 0;
+	private int numDebugRuns = 0;
 
 	static double L2norm = 0;
 

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 
 class DebuggerUsedCollector implements ICollector<EObject> {
 
-	int debuggerUsed = 0;
+	private int debuggerUsed = 0;
 
 	@Override
 	public void process() {}

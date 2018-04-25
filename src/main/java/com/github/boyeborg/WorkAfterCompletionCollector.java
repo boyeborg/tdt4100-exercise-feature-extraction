@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.EObject;
 
 public class WorkAfterCompletionCollector implements ICollector<EObject> {
 
-	boolean isCompleted = false;
-	long completedTimestamp = Long.MAX_VALUE;
-	TreeMap<Long, Integer> edits = new TreeMap<>();
-	int result;
+	private boolean isCompleted = false;
+	private long completedTimestamp = Long.MAX_VALUE;
+	private TreeMap<Long, Integer> edits = new TreeMap<>();
+	private int result;
 
 	static double L2norm = 0;
 

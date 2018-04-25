@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 
 public class CompletionCollector implements ICollector<EObject> {
 
-	double completion = 0.0;
+	private double completion = 0.0;
 
 	@Override
 	public void process() {

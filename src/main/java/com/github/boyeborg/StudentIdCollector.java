@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 
 class StudentIdCollector implements ICollector<EObject> {
 
-	String studentId;
+	private String studentId;
 
 	@Override
 	public void process() {}
