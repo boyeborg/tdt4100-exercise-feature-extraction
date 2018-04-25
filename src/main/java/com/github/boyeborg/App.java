@@ -45,6 +45,7 @@ public class App {
 		factory.add(() -> new DebuggerUsedCollector(), "debuggerUsed");
 		factory.add(() -> new WorkAfterCompletionCollector(), "workAfterCompletion");
 		factory.add(() -> new CompletionCollector(), "completion");
+		factory.add(() -> new DebugRunsCollector(), "numDebugRuns");
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
