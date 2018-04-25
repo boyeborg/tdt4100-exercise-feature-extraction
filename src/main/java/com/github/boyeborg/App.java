@@ -42,6 +42,13 @@ public class App {
 
 		// Add collectors
 		factory.add(() -> new StudentIdCollector(), "studentId");
+		factory.add(() -> new DebuggerUsedCollector(), "debuggerUsed");
+		factory.add(() -> new WorkAfterCompletionCollector(), "workAfterCompletion");
+		factory.add(() -> new CompletionCollector(), "completion");
+		factory.add(() -> new DebugRunsCollector(), "numDebugRuns");
+		factory.add(() -> new EditCenterOfMassCollector(), "editCenterOfMass");
+		factory.add(() -> new WarningCountCollector(), "numWarnings");
+		factory.add(() -> new TotalTimeCollector(10 * 60 * 1000), "totalTime"); // 10 minutes
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
@@ -101,6 +108,10 @@ public class App {
 				}
 			}
 		}
+
+		// Process all events
+		eventConsumer.process();
+		
 		// Print out the results
 		System.out.println(eventConsumer);
 	}
