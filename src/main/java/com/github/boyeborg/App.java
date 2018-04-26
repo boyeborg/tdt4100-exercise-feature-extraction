@@ -49,6 +49,7 @@ public class App {
 		factory.add(() -> new EditCenterOfMassCollector(), "editCenterOfMass");
 		factory.add(() -> new WarningCountCollector(), "numWarnings");
 		factory.add(() -> new TotalTimeCollector(10 * 60 * 1000), "totalTime"); // 10 minutes
+		factory.add(() -> new NonprofitableWorkSessionCollector(), "numNonprofitableWorkSessions");
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
