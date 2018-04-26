@@ -10,12 +10,8 @@ public class DebugRunsCollector implements ICollector<EObject> {
 
 	private int numDebugRuns = 0;
 
-	private static double L2norm = 0;
-
 	@Override
-	public void process() {
-		L2norm += Math.pow(numDebugRuns, 2);
-	}
+	public void process() {}
 
 	@Override
 	public void addEvent(EObject event) {
@@ -28,8 +24,7 @@ public class DebugRunsCollector implements ICollector<EObject> {
 
 	@Override
 	public String getResult() {
-		double normalizedResult = numDebugRuns / Math.sqrt(L2norm);
-		return String.format("%.3f", normalizedResult);
+		return Integer.toString(numDebugRuns);
 	}
 
 }

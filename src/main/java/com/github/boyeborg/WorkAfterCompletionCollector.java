@@ -17,8 +17,6 @@ public class WorkAfterCompletionCollector implements ICollector<EObject> {
 	private TreeMap<Long, Integer> edits = new TreeMap<>();
 	private int result;
 
-	private static double L2norm = 0;
-
 	@Override
 	public void process() {
 
@@ -36,7 +34,6 @@ public class WorkAfterCompletionCollector implements ICollector<EObject> {
 		
 		try {
 			result = edits.tailMap(startKey, true).values().stream().reduce(Integer::sum).get();
-			L2norm += Math.pow(result, 2);
 		} catch (NoSuchElementException e) {
 			result = 0;
 		}
@@ -59,8 +56,7 @@ public class WorkAfterCompletionCollector implements ICollector<EObject> {
 
 	@Override
 	public String getResult() {
-		double normalizedResult = result / Math.sqrt(L2norm);
-		return String.format("%.3f", normalizedResult);
+		return Integer.toString(result);
 	}
 
 }
