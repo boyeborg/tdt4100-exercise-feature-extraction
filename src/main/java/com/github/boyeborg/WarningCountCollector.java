@@ -11,12 +11,8 @@ public class WarningCountCollector implements ICollector<EObject> {
 	private long latestEditTimestamp = 0;
 	private int warningCount = 0;
 
-	private static double L2norm = 0;
-
 	@Override
-	public void process() {
-		L2norm += Math.pow(warningCount, 2);
-	}
+	public void process() {}
 
 	@Override
 	public void addEvent(EObject event) {
@@ -31,7 +27,6 @@ public class WarningCountCollector implements ICollector<EObject> {
 
 	@Override
 	public String getResult() {
-		double normalizedResult = Math.abs(warningCount) / Math.sqrt(L2norm);
-		return String.format("%.3f", normalizedResult);
+		return Integer.toString(Math.abs(warningCount));
 	}
 }

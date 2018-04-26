@@ -16,8 +16,6 @@ public class TotalTimeCollector implements ICollector<EObject> {
 	private double maxPauseTimeInMillis;
 	private long result;
 
-	private static double L2norm = 0;
-
 	public TotalTimeCollector(double maxPauseTimeInMillis) {
 		this.maxPauseTimeInMillis = maxPauseTimeInMillis;
 	}
@@ -37,9 +35,8 @@ public class TotalTimeCollector implements ICollector<EObject> {
 			prevTime = time;
 		}
 
-		result = Math.round(totalTime / 1000.0);
-		
-		L2norm += Math.pow(result, 2);
+		result = Math.round(totalTime / 1000.0); // Convert from milliseconds to seconds
+
 	}
 
 	@Override
@@ -52,8 +49,7 @@ public class TotalTimeCollector implements ICollector<EObject> {
 
 	@Override
 	public String getResult() {
-		double normalizedResult = result / Math.sqrt(L2norm);
-		return String.format("%.3f", normalizedResult);
+		return Long.toString(result);
 	}
 	
 }
