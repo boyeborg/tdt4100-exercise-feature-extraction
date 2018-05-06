@@ -51,6 +51,7 @@ public class App {
 		factory.add(() -> new TotalTimeCollector(10 * 60 * 1000), "totalTime"); // 10 minutes
 		factory.add(() -> new NonprofitableWorkSessionCollector(), "numNonprofitableWorkSessions");
 		factory.add(() -> new AverageEditSizeCollector(), "averageEditSize");
+		factory.add(() -> new ComplexityCollector(), "complexity");
 
 		// Create the event consumer
 		EventConsumer<EObject> eventConsumer = new EventConsumer<>(factory);
